@@ -7,5 +7,7 @@ public class cobacoba {
         for (int i = 0; i < 15; i++) {
             System.out.println("Halo");
         }
+        cobacoba coba = new cobacoba();
+        
     }
 }
