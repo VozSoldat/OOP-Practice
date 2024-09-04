@@ -3,12 +3,33 @@ public class Main {
 
         System.out.println("Hello world!");
 
+        double hutang=0;
+        float bunga=0;
+        int jumlahCicilan=0;
+
+        for (int i = 0; i < args.length; i++) {
+            String[] split = args[i].split("=");
+            String param = split[0];
+            String value = split[1];
+            switch (param){
+                case "-h":
+                    hutang = hutang + Double.parseDouble(value);
+                    break;
+                case "-b":
+                    bunga = bunga + Integer.parseInt(value);
+                    break;
+                case "-jc":
+                    jumlahCicilan += Integer.parseInt(value);
+                    break;
+            }
+        }
+
 //        Membaca input baru
 //        3 parameter: hutang, bunga, jumlah cicilan
 
-        double hutang = Double.parseDouble(args[0]);
-        float bunga = Float.parseFloat(args[1]);
-        int jumlahCicilan = Integer.parseInt(args[2]);
+//        hutang = Double.parseDouble(args[0]);
+//        bunga = Float.parseFloat(args[1]);
+//        jumlahCicilan = Integer.parseInt(args[2]);
 
         System.out.println("Hutang: "+hutang);
         System.out.println("Bunga: "+bunga);
